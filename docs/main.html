@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <script src="script.js"></script>
+  <div class="outBox">
+    <div class="todo-container">
+      <h1 class="todo-title">todos</h1>
+      
+      <div class="input-wrapper">
+        <input type="text" class="todo-input" placeholder="What needs to be done?">
+        <span class="toggle-arrow">&#9660;</span>
+      </div>
+      <ul class="todo-list">
+        <li class="todo-item">
+          <input type="checkbox" id="todo1">
+          <label for="todo1">look at apps</label>
+        </li>
+        <li class="todo-item">
+          <input type="checkbox" id="todo2">
+          <label for="todo2">write words</label>
+        </li>
+        <li class="todo-item">
+          <input type="checkbox" id="todo3">
+          <label for="todo3">feel happy</label>
+        </li>
+      </ul>
+      <div class="todo-footer">
+        <span>3 items left</span>
+        <div class="todo-filters">
+          <button class="active">All</button>
+          <button>Active</button>
+          <button>Completed</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
 </body>
+
 </html>
