@@ -1,0 +1,158 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+}
+
+.outBox {
+  width: 415px;
+  background: #dbd8d8;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px #0000001a;
+}
+
+.todo-container {
+  width: 350px;
+  background: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px #0000001a;
+  border: 1px solid #ddd;
+}
+
+
+/* Titel */
+.todo-title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 2.5em;
+  color: #b94e4e;
+  margin: 0 0 20px;
+}
+
+/* Eingabefeld */
+.todo-input {
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  text-indent: 25px;
+  font-size: 1.2em;
+  border: 2px solid grey;
+  color: #000000;
+
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  /* Passt sich der Breite des Containers an */
+}
+
+.toggle-arrow {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-45%);
+  /* Zentriert den Pfeil vertikal */
+  font-size: 20px;
+  /* Größe des Pfeils */
+  color: #b94e4e;
+  /* Farbe des Pfeils */
+  cursor: pointer;
+  /* Klickbarer Pfeil */
+}
+
+.todo-input:focus {
+  border: 2px solid transparent;
+  outline: none;
+  box-shadow: 0 0 15px 2px #b04d4db6;
+  /* Leuchtender blauer Schatten */
+}
+
+.todo-input::placeholder {
+  color: #cac9c9;
+  font-style: italic;
+}
+
+
+/* Liste der Aufgaben */
+.todo-list {
+  list-style: none;
+  padding: 10px;
+  margin: 0px;
+}
+
+/* Stil für jede Aufgabe */
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Checkbox-Stil als leere Kugel */
+.todo-item input[type="checkbox"] {
+  appearance: none;
+  border: 2px solid #636363;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -5px;
+  cursor: pointer;
+}
+
+/* Ausgefüllte Kugel für abgehakte Aufgaben */
+.todo-item input[type="checkbox"]:checked {
+  background-color: #b94e4e;
+  border-color: #b94e4e;
+}
+
+/* Durchgestrichener Text für erledigte Aufgaben */
+.todo-item input[type="checkbox"]:checked+label {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Fußzeile mit Optionen */
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Filter-Buttons */
+.todo-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-filters button {
+  border: none;
+  background: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #555;
+}
+
+.todo-filters button.active {
+  border: 1px solid #d7a5a5;
+  border-color: #b94e4e;
+  color: #b94e4e;
+  border-radius: 10%;
+}
+
+/* Container für den Stapel */
+.stack-container {
+  position: relative;
+  width: 300px;
+  padding-top: 20px;
+}
