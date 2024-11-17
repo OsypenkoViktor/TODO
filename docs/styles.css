@@ -1,55 +1,65 @@
+:root {
+  --darkergrey:#b6b6b6;
+  --darkgrey:#dbd8d8;
+  --lightgrey:#f7f7f7;
+  --white: #ffffff;
+  --lightblack: #333;
+  --black:#000;
+  --bordo: #b94e4e;
+  --lightbordo:#b04d4db6;
+  --pink:#d7a5a5;
+}
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: var(--lightgrey);
   margin: 0;
 }
 
 .outBox {
   width: 415px;
-  background: #dbd8d8;
+  background:var(--darkgrey);
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0px 4px 10px #0000001a;
+  box-shadow: 0px 4px 10px var(--darkgrey);
 }
 
 .todo-container {
   width: 350px;
-  background: white;
-  padding: 30px;
+  background:var(--white);
+  padding: 10px 40px 20px 20px;
   border-radius: 5px;
-  box-shadow: 0px 4px 10px #0000001a;
-  border: 1px solid #ddd;
+  box-shadow: 0px 4px 10px var(--darkergrey);
+  border: 1px solid var(--darkgrey);
 }
 
 
-/* Titel */
+/* Title */
 .todo-title {
   text-align: center;
   font-weight: 100;
-  font-size: 2.5em;
-  color: #b94e4e;
+  font-size: 4em;
+  color: var(--bordo);
   margin: 0 0 20px;
 }
 
-/* Eingabefeld */
+/* Input field*/
 .todo-input {
   width: 100%;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 15px 10px 0px;
   text-indent: 25px;
   font-size: 1.2em;
-  border: 2px solid grey;
-  color: #000000;
+  border: 2px solid var(--darkgrey);
+  color: var(--black);
 
 }
 
 .input-wrapper {
   position: relative;
   width: 100%;
-  /* Passt sich der Breite des Containers an */
 }
 
 .toggle-arrow {
@@ -57,79 +67,76 @@ body {
   top: 50%;
   left: 5px;
   transform: translateY(-45%);
-  /* Zentriert den Pfeil vertikal */
   font-size: 20px;
-  /* Größe des Pfeils */
-  color: #b94e4e;
-  /* Farbe des Pfeils */
+  color: var(--darkgrey);
   cursor: pointer;
-  /* Klickbarer Pfeil */
 }
 
 .todo-input:focus {
   border: 2px solid transparent;
   outline: none;
-  box-shadow: 0 0 15px 2px #b04d4db6;
-  /* Leuchtender blauer Schatten */
+  box-shadow: 0 0 15px 2px var(--lightbordo);
+  
 }
 
 .todo-input::placeholder {
-  color: #cac9c9;
+  color: var(--darkergrey);
   font-style: italic;
 }
 
 
-/* Liste der Aufgaben */
 .todo-list {
   list-style: none;
   padding: 10px;
   margin: 0px;
 }
 
-/* Stil für jede Aufgabe */
+/* todos style*/
 .todo-item {
   display: flex;
   align-items: flex-start;
   padding: 10px 0;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--lightgrey);
   font-size: 1.1em;
-  color: #333;
+  color: var(--lightblack);
 }
 
-/* Checkbox-Stil als leere Kugel */
+/* empty circle design */
 .todo-item input[type="checkbox"] {
   appearance: none;
-  border: 2px solid #636363;
+  border: 2px solid var(--darkergrey);
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin-left: -5px;
   cursor: pointer;
+  transform: translateY(-20%);
+  
 }
 
-/* Ausgefüllte Kugel für abgehakte Aufgaben */
+/* Filled circle for completed tasks*/
 .todo-item input[type="checkbox"]:checked {
-  background-color: #b94e4e;
-  border-color: #b94e4e;
+  background-color: var(--bordo);
+  border-color: var(--bordo);
 }
 
-/* Durchgestrichener Text für erledigte Aufgaben */
+/* Strikethrough text for completed tasks */
 .todo-item input[type="checkbox"]:checked+label {
   text-decoration: line-through;
-  color: #aaa;
+  color: var(--darkgrey);
 }
 
-/* Fußzeile mit Optionen */
+/* Footer with options */
 .todo-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.9em;
-  color: #555;
+  color: var(--lightblack);
   margin-top: 20px;
 }
 
-/* Filter-Buttons */
+/* Filter buttons */
 .todo-filters {
   display: flex;
   gap: 10px;
@@ -140,19 +147,12 @@ body {
   background: none;
   padding: 5px 10px;
   cursor: pointer;
-  color: #555;
+  color: var(--lightblack);
 }
 
 .todo-filters button.active {
-  border: 1px solid #d7a5a5;
-  border-color: #b94e4e;
-  color: #b94e4e;
+  border: 1px solid var(--pink);
+  border-color: var(--bordo);
+  color: var(--bordo);
   border-radius: 10%;
-}
-
-/* Container für den Stapel */
-.stack-container {
-  position: relative;
-  width: 300px;
-  padding-top: 20px;
 }
